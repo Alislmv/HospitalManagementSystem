@@ -8,4 +8,7 @@ class Doctor(Person):
         self.experience = experience
 
     def showInfo(self):
-        pass
+        print(f"ID: {self.doctorID} - {self.name} {self.surname}")
+        print(f"Specialization: {self.specialization}")
+        print(f"Experience: {self.experience} years")
+        print(f"Phone: {self.phone}")

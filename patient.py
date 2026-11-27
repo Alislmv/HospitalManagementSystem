@@ -8,10 +8,17 @@ class Patient(Person):
         self.__medicalHistory = medicalHistory # private
 
     def showInfo(self):
-        pass
+        print(f"ID: {self.patientID} - {self.name} {self.surname}")
+        print(f"Age: {self.age}")
+        print(f"Phone: {self.phone}")
+        print(f"Blood group: {self._bloodGroup}")
 
     def getMedicalHistory(self):
-        pass
+        return self.__medicalHistory
 
-    def updateMedicalHistory(self):
-        pass
+    def updateMedicalHistory(self, medicalHistory):
+        self.__medicalHistory = medicalHistory
+
+    @property
+    def bloodGroup(self):
+        return self._bloodGroup
