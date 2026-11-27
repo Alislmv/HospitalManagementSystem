@@ -8,16 +8,34 @@ class Hospital:
         self.appointments = []
 
     def addDoctor(self, doctor):
-        pass
+        self.doctors.append(doctor)
 
     def addPatient(self, patient):
-        pass
+        self.patients.append(patient)
 
     def showDoctors(self):
-        pass
+        if not self.doctors:
+            print("There are no doctors")
+            return
+
+        for doctor in self.doctors:
+            doctor.showInfo()
+
+    def showPatient(self):
+        if not self.patients:
+            print("There are no patients")
+            return
+
+        for patient in self.patients:
+            patient.showInfo()
 
     def createAppointment(self, doctorID, patientID, date):
         pass
 
     def showAppointments(self):
-        pass
+        if not self.appointments:
+            print("There are no appointments")
+            return
+      
+        for appointment in self.appointments:
+            self.appointments.showInfo()
